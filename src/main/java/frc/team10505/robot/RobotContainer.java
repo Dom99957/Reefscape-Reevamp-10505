@@ -126,6 +126,13 @@ public class RobotContainer {
         xbox2.y().onTrue(elevatorSubsys.setHeight(48.5));
     }
 
+    private void coralSubsysButtonBindings() {
+        xbox2.povDown().onTrue(coralSubsys.Intake());
+        xbox2.povUp().onTrue(coralSubsys.outakeTop());
+        xbox2.povLeft().whileTrue(coralSubsys.Outtake());
+        xbox2.povRight().whileTrue(coralSubsys.trough());
+    }
+
     private void configSendableChoosers() {
         polarityChooser.setDefaultOption("Positive", 1.0);
         polarityChooser.addOption("Negative", -1.0);
