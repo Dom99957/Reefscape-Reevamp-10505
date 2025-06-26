@@ -69,6 +69,7 @@ public class RobotContainer {
 
             configButtonBindings();
             elevatorButtonBindings();
+            coralSubsysButtonBindings();
         }
         drivetrainSubsys.configAutoBuilder();
         configNamedCommands();
